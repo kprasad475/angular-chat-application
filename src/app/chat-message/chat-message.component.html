@@ -1,6 +1,7 @@
 <mat-list-item [@messageAnimation]>
-    <div class="message">
-      <span>{{ message }}</span>
-    </div>
-  </mat-list-item>
-  
+  <img matListAvatar src="https://via.placeholder.com/40" alt="Avatar">
+  <div class="message">
+    <span>{{ message }}</span>
+    <span class="timestamp">{{ timestamp }}</span> <!-- Add this line -->
+  </div>
+</mat-list-item>

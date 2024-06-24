@@ -21,4 +21,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class ChatMessageComponent {
   @Input() message: string;
+  @Input() timestamp: string;  // Add this line
+
 }

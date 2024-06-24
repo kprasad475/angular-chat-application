@@ -1,14 +1,23 @@
 import { Component } from '@angular/core';
 
+interface ChatMessage {
+  text: string;
+  timestamp: string;
+}
+
 @Component({
   selector: 'app-chat-window',
   templateUrl: './chat-window.component.html',
-  styleUrl: './chat-window.component.css'
+  styleUrls: ['./chat-window.component.css']
 })
 export class ChatWindowComponent {
-messages:string[]=[];
+  messages: ChatMessage[] = [];
 
-sendMessage(message:string){
-  this.messages.push(message)
-}
+  sendMessage(messageText: string) {
+    const message: ChatMessage = {
+      text: messageText,
+      timestamp: new Date().toLocaleTimeString()
+    };
+    this.messages.push(message);
+  }
 }
